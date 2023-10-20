@@ -15,7 +15,22 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBOutlet weak var emailTxt: UITextField!
+    
+    @IBOutlet weak var passwordTxt: UITextField!
+    
+    
+    @IBAction func loginBtn(_ sender: Any) {
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
