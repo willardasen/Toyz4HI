@@ -14,6 +14,7 @@
 		056E14972AE25D2700774D92 /* Toyz4HI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 056E14952AE25D2700774D92 /* Toyz4HI.xcdatamodeld */; };
 		056E14992AE25D2800774D92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056E14982AE25D2800774D92 /* Assets.xcassets */; };
 		056E149C2AE25D2800774D92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 056E149A2AE25D2800774D92 /* LaunchScreen.storyboard */; };
+		056E14A42AE25DBF00774D92 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056E14A32AE25DBF00774D92 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		056E14982AE25D2800774D92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		056E149B2AE25D2800774D92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		056E149D2AE25D2800774D92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		056E14A32AE25DBF00774D92 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				056E149A2AE25D2800774D92 /* LaunchScreen.storyboard */,
 				056E149D2AE25D2800774D92 /* Info.plist */,
 				056E14952AE25D2700774D92 /* Toyz4HI.xcdatamodeld */,
+				056E14A32AE25DBF00774D92 /* LoginViewController.swift */,
 			);
 			path = Toyz4HI;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				056E14912AE25D2700774D92 /* ViewController.swift in Sources */,
 				056E148D2AE25D2700774D92 /* AppDelegate.swift in Sources */,
 				056E148F2AE25D2700774D92 /* SceneDelegate.swift in Sources */,
+				056E14A42AE25DBF00774D92 /* LoginViewController.swift in Sources */,
 				056E14972AE25D2700774D92 /* Toyz4HI.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
