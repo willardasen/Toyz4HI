@@ -3,7 +3,7 @@
 //  Toyz4HI
 //
 //  Created by prk on 20/10/23.
-//
+// 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
 
 import UIKit
 
@@ -38,6 +38,7 @@ class LoginViewController: UIViewController {
             return
         }
         
+        // yang kureng: 1. validasi email dan password salah(cek dari database)
         
         
     }

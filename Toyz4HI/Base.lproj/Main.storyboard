@@ -125,6 +125,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V4g-uT-VhO"/>
+                                    <action selector="registerBtn:" destination="EMV-Or-5O7" eventType="touchUpInside" id="LNO-3f-TYy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gna-MV-zAY">
@@ -204,6 +205,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="4im-Q2-zHK"/>
+                    <connections>
+                        <outlet property="confirmPassTxt" destination="CLt-z3-8M9" id="v7Z-n5-R3X"/>
+                        <outlet property="emailTxt" destination="24v-ek-sjs" id="k5u-Fx-s9h"/>
+                        <outlet property="passwordTxt" destination="GY5-i5-UIM" id="gfA-WH-QMT"/>
+                        <outlet property="usernameTxt" destination="XCJ-NH-NR4" id="5fV-fy-E2C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TgO-r9-smp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -295,7 +302,7 @@
             </objects>
             <point key="canvasLocation" x="4579" y="-19"/>
         </scene>
-        <!--Item 1-->
+        <!--Home Page-->
         <scene sceneID="CjC-qy-ET1">
             <objects>
                 <viewController id="OOy-qW-Fni" sceneMemberID="viewController">
@@ -305,7 +312,7 @@
                         <viewLayoutGuide key="safeArea" id="JeM-TE-1UW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="qLp-HA-71v"/>
+                    <tabBarItem key="tabBarItem" title="Home Page" id="qLp-HA-71v"/>
                     <navigationItem key="navigationItem" id="4Qu-aU-oug"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJK-hm-5MR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
