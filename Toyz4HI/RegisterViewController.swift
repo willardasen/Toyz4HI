@@ -16,6 +16,20 @@ class RegisterViewController: UIViewController {
     }
     
 
+    @IBOutlet weak var usernameTxt: UITextField!
+    
+    @IBOutlet weak var emailTxt: UITextField!
+    
+    @IBOutlet weak var passwordTxt: UITextField!
+    
+    @IBOutlet weak var confirmPassTxt: UITextField!
+    
+    
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
