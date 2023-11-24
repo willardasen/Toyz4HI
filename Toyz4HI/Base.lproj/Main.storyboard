@@ -533,7 +533,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Add"/>
                                 <connections>
-                                    <segue destination="hBO-O3-E7s" kind="show" id="IWe-F0-eVZ"/>
+                                    <segue destination="hBO-O3-E7s" kind="show" id="cUB-Vi-bDM"/>
                                 </connections>
                             </button>
                         </subviews>
