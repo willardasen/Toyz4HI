@@ -44,7 +44,7 @@ class RegisterViewController: UIViewController {
             return
         }
         
-        guard let confirmPass = emailTxt.text, !email.isEmpty else {
+        guard let confirmPass = confirmPassTxt.text, !email.isEmpty else {
             showAlert(title:"Confirm Password is empty",message: "Confirm Password must not be empty.")
             return
         }
