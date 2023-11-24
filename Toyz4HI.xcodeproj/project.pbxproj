@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		055757822B10819400E442D3 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055757812B10819400E442D3 /* HomeTableViewCell.swift */; };
 		055757842B109E7E00E442D3 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055757832B109E7E00E442D3 /* AdminViewController.swift */; };
+		055757862B10AAD000E442D3 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055757852B10AAD000E442D3 /* HomeTabBarController.swift */; };
 		056E148D2AE25D2700774D92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056E148C2AE25D2700774D92 /* AppDelegate.swift */; };
 		056E148F2AE25D2700774D92 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056E148E2AE25D2700774D92 /* SceneDelegate.swift */; };
 		056E14912AE25D2700774D92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056E14902AE25D2700774D92 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		055757812B10819400E442D3 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		055757832B109E7E00E442D3 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		055757852B10AAD000E442D3 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		056E14892AE25D2700774D92 /* Toyz4HI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toyz4HI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		056E148C2AE25D2700774D92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		056E148E2AE25D2700774D92 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				05B3924F2AE7B22B0015CAF6 /* HomeViewController.swift */,
 				055757812B10819400E442D3 /* HomeTableViewCell.swift */,
 				055757832B109E7E00E442D3 /* AdminViewController.swift */,
+				055757852B10AAD000E442D3 /* HomeTabBarController.swift */,
 			);
 			path = Toyz4HI;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				056E14F02AE27D1A00774D92 /* LoginViewController.swift in Sources */,
 				056E14912AE25D2700774D92 /* ViewController.swift in Sources */,
 				056E148D2AE25D2700774D92 /* AppDelegate.swift in Sources */,
+				055757862B10AAD000E442D3 /* HomeTabBarController.swift in Sources */,
 				056E148F2AE25D2700774D92 /* SceneDelegate.swift in Sources */,
 				056E14EE2AE26EDD00774D92 /* RegisterViewController.swift in Sources */,
 				05B392502AE7B22B0015CAF6 /* HomeViewController.swift in Sources */,

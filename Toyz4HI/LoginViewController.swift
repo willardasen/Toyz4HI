@@ -34,10 +34,20 @@ class LoginViewController: UIViewController {
             return
         }
         
+        if(email == "admin"  && password == "admin"){
+            if let nextPage = storyboard?.instantiateViewController(withIdentifier: "adminView"){
+                self.navigationController?.pushViewController(nextPage, animated: true)
+                return
+            }
+            
+        }
+        
         if !(email.hasSuffix(".com") && email.contains("@")) {
             showAlert(title: "Email is not valid", message: "Email must contain @ and ends with .com")
             return
         }
+        
+        
         
         // yang kureng: 1. validasi email dan password salah(cek dari database)
         
