@@ -12,7 +12,7 @@ struct games {
     var name : String?
     var category : String?
     var desc : String?
-    var price : Int?
+    var price : Int
     var image : String?
 }
 

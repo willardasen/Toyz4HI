@@ -12,6 +12,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
+        
+//        emailTxt.layer.borderWidth = 2
+//        emailTxt.layer.cornerRadius = 10
+//
+//        passwordTxt.layer.cornerRadius = 2
+//        passwordTxt.layer.cornerRadius = 10
 
         // Do any additional setup after loading the view.
     }
