@@ -6,15 +6,9 @@
 //
 
 import UIKit
+import CoreData
 
 //NB: ini kemgkinan bs ganti karna nanti pake database
-struct games {
-    var name : String?
-    var category : String?
-    var desc : String?
-    var price : Int
-    var image : String?
-}
 
 
 class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
