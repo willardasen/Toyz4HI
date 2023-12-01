@@ -21,7 +21,7 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
     var arrGames = [games]()
     
     func initGames(){
-        arrGames.append(games(name: "God of War", category: "Adventure, RPG", desc: "BOI BOI BOI BOI BOI", price: 500000, image: "GOW"))
+        arrGames.append(games(name: "God of War", category: "Adventure, RPG", desc: "God of War[b] is an action-adventure game developed by Santa Monica Studio and published by Sony Interactive Entertainment. ", price: 500000, image: "GOW"))
         arrGames.append(games(name: "God of War", category: "Adventure, RPG", desc: "BOI BOI BOI BOI BOI", price: 500000, image: "GOW"))
         arrGames.append(games(name: "God of War", category: "Adventure, RPG", desc: "BOI BOI BOI BOI BOI", price: 500000, image: "GOW"))
     }
