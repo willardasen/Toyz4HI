@@ -1,19 +1,21 @@
 //
-//  AdminViewController.swift
+//  AdminAddGameViewController.swift
 //  Toyz4HI
 //
-//  Created by prk on 11/24/23.
+//  Created by prk on 12/4/23.
 //
 
 import UIKit
 
-class AdminViewController: UIViewController {
+class AdminAddGameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.hidesBackButton = true
+
         // Do any additional setup after loading the view.
     }
     
 
+    
+    
 }

@@ -83,7 +83,7 @@ class RegisterViewController: UIViewController {
         
         
         
-        let entityTarget = NSEntityDescription.entity(forEntityName: "user", in: context)
+        let entityTarget = NSEntityDescription.entity(forEntityName: "User", in: context)
         if (entityTarget != nil) {
             let newUser = NSManagedObject(entity: entityTarget!, insertInto: context)
             newUser.setValue(email, forKey: "email")
@@ -113,9 +113,11 @@ class RegisterViewController: UIViewController {
     func fetchUserData(){
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         do{
-            var results = try context.fetch(request) as! [NSManagedObject]
+            let results = try context.fetch(request) as! [NSManagedObject]
             for data in results{
                 arrUser.append(data.value(forKey: "email") as! String)
+//                print(data.value(forKey: "email") as! String)
+//                print("test")
             }
             print("fetching successful")
         }catch{

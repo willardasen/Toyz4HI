@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		05049A932B18797300525C0F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05049A922B18797300525C0F /* User.swift */; };
 		05049A952B187A2500525C0F /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05049A942B187A2500525C0F /* Games.swift */; };
+		051C00592B1DCAB3002A43E5 /* AdminAddGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051C00582B1DCAB3002A43E5 /* AdminAddGameViewController.swift */; };
 		055757822B10819400E442D3 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055757812B10819400E442D3 /* HomeTableViewCell.swift */; };
 		055757842B109E7E00E442D3 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055757832B109E7E00E442D3 /* AdminViewController.swift */; };
 		055757862B10AAD000E442D3 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055757852B10AAD000E442D3 /* HomeTabBarController.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		05049A922B18797300525C0F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		05049A942B187A2500525C0F /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
+		051C00582B1DCAB3002A43E5 /* AdminAddGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminAddGameViewController.swift; sourceTree = "<group>"; };
 		055757812B10819400E442D3 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		055757832B109E7E00E442D3 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		055757852B10AAD000E442D3 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				055757852B10AAD000E442D3 /* HomeTabBarController.swift */,
 				05049A922B18797300525C0F /* User.swift */,
 				05049A942B187A2500525C0F /* Games.swift */,
+				051C00582B1DCAB3002A43E5 /* AdminAddGameViewController.swift */,
 			);
 			path = Toyz4HI;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				055757822B10819400E442D3 /* HomeTableViewCell.swift in Sources */,
 				056E14972AE25D2700774D92 /* Toyz4HI.xcdatamodeld in Sources */,
 				05049A932B18797300525C0F /* User.swift in Sources */,
+				051C00592B1DCAB3002A43E5 /* AdminAddGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
