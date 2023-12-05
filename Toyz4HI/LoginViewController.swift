@@ -69,7 +69,11 @@ class LoginViewController: UIViewController {
         do{
             let results = try context.fetch(request) as! [NSManagedObject]
             for data in results{
-                arrUser.append(user(email: data.value(forKey: "email") as! String, name: data.value(forKey: "name") as! String, password: data.value(forKey: "password") as! String))
+                arrUser.append(user(
+                    email: data.value(forKey: "email") as! String,
+                    name: data.value(forKey: "name") as! String,
+                    password: data.value(forKey: "password") as! String)
+                )
             }
             print("fetching successful")
         }catch{

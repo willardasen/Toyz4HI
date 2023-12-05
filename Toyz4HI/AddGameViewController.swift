@@ -1,18 +1,23 @@
 //
-//  AdminAddGameViewController.swift
+//  AddGameViewController.swift
 //  Toyz4HI
 //
-//  Created by prk on 12/4/23.
+//  Created by prk on 05/12/23.
 //
 
 import UIKit
+import CoreData
 
-class AdminAddGameViewController: UIViewController {
+class AddGameViewController: UIViewController {
 
+    var context: NSManagedObjectContext!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
+        context = appDelegate.persistentContainer.viewContext
     }
     
     @IBOutlet weak var gameNameTxt: UITextField!
@@ -22,12 +27,9 @@ class AdminAddGameViewController: UIViewController {
     @IBOutlet weak var descTxt: UITextField!
     
     @IBOutlet weak var priceTxt: UITextField!
+
     
-    @IBAction func imageOptionBtn(_ sender: Any) {
-        
-    }
-    
-    @IBAction func addGameBtn(_ sender: Any) {
+    @IBAction func AddGameOnClick(_ sender: Any) {
         guard let gameName = gameNameTxt.text, !gameName.isEmpty else {
             showAlert(title:"Game name is empty",message: "Game name must not be empty.")
             return
@@ -48,7 +50,24 @@ class AdminAddGameViewController: UIViewController {
             return
         }
         
+        let entityTarget = NSEntityDescription.entity(forEntityName: "Game", in: context)
         
+        if (entityTarget != nil) {
+            let newGame = NSManagedObject(entity: entityTarget!, insertInto: context)
+            
+            newGame.setValue(gameName, forKey: "gameName")
+            newGame.setValue(category, forKey: "category")
+            newGame.setValue(desc, forKey: "gameDesc")
+            newGame.setValue(Int(price), forKey: "price")
+            newGame.setValue("GOW Ragnarok", forKey: "image")
+        }
+        
+        do {
+            try context.save()
+            print("Successfully save game")
+        } catch {
+            print("Error saving game")
+        }
     }
     
     func showAlert(title: String, message: String) {
@@ -57,8 +76,4 @@ class AdminAddGameViewController: UIViewController {
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
-    
-    
-    
-    
 }

@@ -93,12 +93,10 @@ class RegisterViewController: UIViewController {
 
         do{
             try context.save()
-            print("save Success")
+            print("Save Success")
         }catch{
             print("register error")
         }
-        // yang kureng: 1. validasi email has already exist 2.masukan ke database
-        
     }
     
     
