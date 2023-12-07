@@ -23,6 +23,9 @@
 		056E14F02AE27D1A00774D92 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056E14EF2AE27D1A00774D92 /* LoginViewController.swift */; };
 		056F04112B1EE5E400E7E841 /* AddGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F04102B1EE5E400E7E841 /* AddGameViewController.swift */; };
 		05B392502AE7B22B0015CAF6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B3924F2AE7B22B0015CAF6 /* HomeViewController.swift */; };
+		05FB35A82B21A99A00A2DF2C /* AdminTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB35A72B21A99A00A2DF2C /* AdminTableViewCell.swift */; };
+		05FB35AA2B21D1DC00A2DF2C /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB35A92B21D1DC00A2DF2C /* CartTableViewCell.swift */; };
+		05FB35AC2B21D20200A2DF2C /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB35AB2B21D20200A2DF2C /* CartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		056E14EF2AE27D1A00774D92 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		056F04102B1EE5E400E7E841 /* AddGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameViewController.swift; sourceTree = "<group>"; };
 		05B3924F2AE7B22B0015CAF6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		05FB35A72B21A99A00A2DF2C /* AdminTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTableViewCell.swift; sourceTree = "<group>"; };
+		05FB35A92B21D1DC00A2DF2C /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		05FB35AB2B21D20200A2DF2C /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,9 @@
 				05049A922B18797300525C0F /* User.swift */,
 				05049A942B187A2500525C0F /* Games.swift */,
 				056F04102B1EE5E400E7E841 /* AddGameViewController.swift */,
+				05FB35A72B21A99A00A2DF2C /* AdminTableViewCell.swift */,
+				05FB35A92B21D1DC00A2DF2C /* CartTableViewCell.swift */,
+				05FB35AB2B21D20200A2DF2C /* CartViewController.swift */,
 			);
 			path = Toyz4HI;
 			sourceTree = "<group>";
@@ -179,6 +188,9 @@
 				056E14EE2AE26EDD00774D92 /* RegisterViewController.swift in Sources */,
 				05B392502AE7B22B0015CAF6 /* HomeViewController.swift in Sources */,
 				055757822B10819400E442D3 /* HomeTableViewCell.swift in Sources */,
+				05FB35A82B21A99A00A2DF2C /* AdminTableViewCell.swift in Sources */,
+				05FB35AC2B21D20200A2DF2C /* CartViewController.swift in Sources */,
+				05FB35AA2B21D1DC00A2DF2C /* CartTableViewCell.swift in Sources */,
 				056E14972AE25D2700774D92 /* Toyz4HI.xcdatamodeld in Sources */,
 				05049A932B18797300525C0F /* User.swift in Sources */,
 			);

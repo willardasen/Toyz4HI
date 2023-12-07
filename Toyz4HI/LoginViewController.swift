@@ -21,16 +21,25 @@ class LoginViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
         context = appDelegate.persistentContainer.viewContext
+        
+        initDummy()
+        fetchUserData()
+        
+//        for user in arrUser {
+//            print(user.email)
+//            print(user.password)
+//        }
+    }
+    
+    func initDummy(){
+        arrUser.append(user(email: "dummy@gmail.com", name: "dummy", password: "dummy"))
     }
 
     @IBOutlet weak var emailTxt: UITextField!
     
-    
     @IBOutlet weak var passwordTxt: UITextField!
     
-    
     @IBAction func loginBtn(_ sender: Any) {
-        fetchUserData()
         
         guard let email = emailTxt.text, !email.isEmpty else {
             showAlert(title:"Email is empty",message: "Email must not be empty.")
@@ -57,11 +66,17 @@ class LoginViewController: UIViewController {
         
         // yang kureng: 1. validasi email dan password salah(cek dari database)
         for user in arrUser {
-            if (user.email != email || user.password != password){
-                showAlert(title: "Invalid Credential", message: "Email or Password is wrong")
+            if (user.email == email && user.password == password) {
+                print(user.email)
+                print(user.password)
+                if let nextPage = storyboard?.instantiateViewController(withIdentifier: "tabBarView"){
+                    self.navigationController?.pushViewController(nextPage, animated: true)
+                    showAlert(title: "Login User", message: "Welcome, \(user.name)")
+                }
             }
         }
         
+        showAlert(title: "Invalid Credential", message: "Email or Password is wrong")
     }
     
     func fetchUserData(){

@@ -8,17 +8,12 @@
 import UIKit
 import CoreData
 
-//NB: ini kemgkinan bs ganti karna nanti pake database
-
-
-class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class HomeViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
-
     @IBOutlet weak var tvGames: UITableView!
     
-    
-    //NB: ini kemgkinan bs ganti karna nanti pake database
     var arrGames = [games]()
+    var context: NSManagedObjectContext!
     
     func initGames(){
         arrGames.append(games(name: "God of War", category: "Adventure, RPG", desc: "God of War[b] is an action-adventure game developed by Santa Monica Studio and published by Sony Interactive Entertainment. ", price: 500000, image: "GOW"))
@@ -26,13 +21,41 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
         arrGames.append(games(name: "God of War", category: "Adventure, RPG", desc: "BOI BOI BOI BOI BOI", price: 500000, image: "GOW"))
     }
     
+    func loadGame() {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Game")
+        
+        do {
+            let results = try context.fetch(request) as! [NSManagedObject]
+            
+            for data in results {
+                    arrGames.append(games(
+                    name: (data.value(forKey: "gameName") as! String),
+                    category: (data.value(forKey: "category") as! String),
+                    desc: (data.value(forKey: "gameDesc") as! String),
+                    price: (data.value(forKey: "price") as! Int),
+                    image: (data.value(forKey: "image") as! String)
+                ))
+            }
+            print("Fetch success")
+            tvGames.reloadData()
+        } catch {
+            print("Cannot fetch game data")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
         
-        initGames()
+//        initGames()
         tvGames.dataSource = self
         tvGames.delegate = self
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        context = appDelegate.persistentContainer.viewContext
+        
+        loadGame()
     }
     
     
