@@ -161,6 +161,10 @@
                                                     <buttonConfiguration key="configuration" style="filled" title="Add to cart">
                                                         <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="addToCardClicked:" destination="iEN-qk-yhj" eventType="touchUpInside" id="gMz-mq-8Jw"/>
+                                                        <action selector="addToCardOnClicked:" destination="wlf-fh-lGE" eventType="touchUpInside" id="M3f-gv-35L"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwS-9x-ddd">
                                                     <rect key="frame" x="289" y="173" width="96" height="28"/>
@@ -250,6 +254,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4a-lh-LU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="iEN-qk-yhj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3574.8091603053435" y="-19.014084507042256"/>
         </scene>
@@ -570,7 +575,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List of Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDr-Xb-Nas">
-                                <rect key="frame" x="144" y="88" width="105" height="21"/>
+                                <rect key="frame" x="144" y="132" width="105" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -770,8 +775,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gOi-lX-kUP"/>
-        <segue reference="gk0-k6-0To"/>
+        <segue reference="KYX-GM-nTb"/>
         <segue reference="pPM-PF-CWI"/>
     </inferredMetricsTieBreakers>
     <resources>

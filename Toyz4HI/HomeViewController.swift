@@ -14,12 +14,8 @@ class HomeViewController: UIViewController,UITableViewDataSource, UITableViewDel
     
     var arrGames = [games]()
     var context: NSManagedObjectContext!
+    var email: String?
     
-    func initGames(){
-        arrGames.append(games(name: "God of War", category: "Adventure, RPG", desc: "God of War[b] is an action-adventure game developed by Santa Monica Studio and published by Sony Interactive Entertainment. ", price: 500000, image: "GOW"))
-        arrGames.append(games(name: "God of War", category: "Adventure, RPG", desc: "BOI BOI BOI BOI BOI", price: 500000, image: "GOW"))
-        arrGames.append(games(name: "God of War", category: "Adventure, RPG", desc: "BOI BOI BOI BOI BOI", price: 500000, image: "GOW"))
-    }
     
     func loadGame() {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Game")
@@ -56,6 +52,9 @@ class HomeViewController: UIViewController,UITableViewDataSource, UITableViewDel
         context = appDelegate.persistentContainer.viewContext
         
         loadGame()
+//        let tabBar = tabBarController as! HomeTabBarController
+//
+//        print("ini pny tabbar" + tabBar.emailCurrent)
     }
     
     
@@ -70,11 +69,36 @@ class HomeViewController: UIViewController,UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellGames") as! HomeTableViewCell
         
-        cell.nameLbl.text = arrGames[indexPath.row].name
-        cell.categoryLbl.text = arrGames[indexPath.row].category
-        cell.descLbl.text = arrGames[indexPath.row].desc
-        cell.priceLbl.text = "Rp. \(arrGames[indexPath.row].price)"
-        cell.gamesImg.image = UIImage(named: arrGames[indexPath.row].image!)
+        let cellName = arrGames[indexPath.row].name
+        let cellCategory = arrGames[indexPath.row].category
+        let cellDesc = arrGames[indexPath.row].desc
+        let cellPrice = "Rp. \(arrGames[indexPath.row].price)"
+        let cellImage = arrGames[indexPath.row].image
+        
+        cell.nameLbl.text = cellName
+        cell.categoryLbl.text = cellCategory
+        cell.descLbl.text = cellDesc
+        cell.priceLbl.text = cellPrice
+        cell.gamesImg.image = UIImage(named: cellImage!)
+        
+        let tabBar = tabBarController as! HomeTabBarController
+        
+        cell.handleInsert = {
+            let entityTarget = NSEntityDescription.entity(forEntityName: "Cart", in: self.context)
+
+            let newCart = NSManagedObject(entity: entityTarget!, insertInto: self.context )
+            
+            newCart.setValue(tabBar.emailCurrent, forKey: "email")
+            newCart.setValue(cellName, forKey: "gameName")
+            newCart.setValue(cellPrice, forKey: "price")
+            
+            do{
+                try self.context.save()
+                print("Added to Cart")
+            }catch{
+                print("Error while adding to cart")
+            }
+        }
         
         return cell
     }

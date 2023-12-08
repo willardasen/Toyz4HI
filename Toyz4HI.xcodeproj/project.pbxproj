@@ -26,6 +26,7 @@
 		05FB35A82B21A99A00A2DF2C /* AdminTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB35A72B21A99A00A2DF2C /* AdminTableViewCell.swift */; };
 		05FB35AA2B21D1DC00A2DF2C /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB35A92B21D1DC00A2DF2C /* CartTableViewCell.swift */; };
 		05FB35AC2B21D20200A2DF2C /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB35AB2B21D20200A2DF2C /* CartViewController.swift */; };
+		05FB35AE2B22D9A600A2DF2C /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB35AD2B22D9A600A2DF2C /* Cart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		05FB35A72B21A99A00A2DF2C /* AdminTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTableViewCell.swift; sourceTree = "<group>"; };
 		05FB35A92B21D1DC00A2DF2C /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		05FB35AB2B21D20200A2DF2C /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		05FB35AD2B22D9A600A2DF2C /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				05FB35A72B21A99A00A2DF2C /* AdminTableViewCell.swift */,
 				05FB35A92B21D1DC00A2DF2C /* CartTableViewCell.swift */,
 				05FB35AB2B21D20200A2DF2C /* CartViewController.swift */,
+				05FB35AD2B22D9A600A2DF2C /* Cart.swift */,
 			);
 			path = Toyz4HI;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				05B392502AE7B22B0015CAF6 /* HomeViewController.swift in Sources */,
 				055757822B10819400E442D3 /* HomeTableViewCell.swift in Sources */,
 				05FB35A82B21A99A00A2DF2C /* AdminTableViewCell.swift in Sources */,
+				05FB35AE2B22D9A600A2DF2C /* Cart.swift in Sources */,
 				05FB35AC2B21D20200A2DF2C /* CartViewController.swift in Sources */,
 				05FB35AA2B21D1DC00A2DF2C /* CartTableViewCell.swift in Sources */,
 				056E14972AE25D2700774D92 /* Toyz4HI.xcdatamodeld in Sources */,

@@ -18,6 +18,11 @@ class CartViewController: UIViewController,UITableViewDataSource,UITableViewDele
     }
     
 
+    @IBAction func addToCardClicked(_ sender: Any) {
+        
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrGames.count
     }

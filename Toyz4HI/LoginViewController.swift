@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     var arrUser = [user]()
     
     var context: NSManagedObjectContext!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +25,7 @@ class LoginViewController: UIViewController {
         
         initDummy()
         fetchUserData()
-        
-//        for user in arrUser {
-//            print(user.email)
-//            print(user.password)
-//        }
+
     }
     
     func initDummy(){
@@ -69,15 +66,30 @@ class LoginViewController: UIViewController {
             if (user.email == email && user.password == password) {
                 print(user.email)
                 print(user.password)
-                if let nextPage = storyboard?.instantiateViewController(withIdentifier: "tabBarView"){
+                if let nextPage = storyboard?.instantiateViewController(withIdentifier: "tabBarView") as? HomeTabBarController{
+                    nextPage.emailCurrent = user.email
                     self.navigationController?.pushViewController(nextPage, animated: true)
-                    showAlert(title: "Login User", message: "Welcome, \(user.name)")
+                    showAlert(title: "Login Successful", message: "Welcome, \(user.name)")
                 }
+                
+//                self.performSegue(withIdentifier: "homeView", sender: self)
+                
+                
+                
             }
         }
         
         showAlert(title: "Invalid Credential", message: "Email or Password is wrong")
     }
+    
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "homeView" {
+//            if let info = segue.destination as? HomeTabBarController {
+//                info.emailCurrent = emailTxt.text!
+//            }
+//        }
+//    }
     
     func fetchUserData(){
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
