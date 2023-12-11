@@ -114,8 +114,7 @@ class RegisterViewController: UIViewController {
             let results = try context.fetch(request) as! [NSManagedObject]
             for data in results{
                 arrUser.append(data.value(forKey: "email") as! String)
-//                print(data.value(forKey: "email") as! String)
-//                print("test")
+
             }
             print("fetching successful")
         }catch{

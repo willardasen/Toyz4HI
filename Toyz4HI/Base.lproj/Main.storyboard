@@ -628,17 +628,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnd-gi-qcs">
-                                                    <rect key="frame" x="195" y="164" width="80" height="35"/>
+                                                    <rect key="frame" x="195" y="164" width="178" height="35"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="Update"/>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unc-Bl-PTJ">
-                                                    <rect key="frame" x="298" y="164" width="86" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="tintColor" systemColor="systemRedColor"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" title="Delete"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxL-FR-7A1">
                                                     <rect key="frame" x="183" y="118" width="201" height="21"/>
@@ -801,7 +794,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="KYX-GM-nTb"/>
-        <segue reference="S6I-7W-wHf"/>
+        <segue reference="JDm-Yd-wwb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Toyz4HI" width="500" height="500"/>

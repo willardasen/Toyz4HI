@@ -71,25 +71,13 @@ class LoginViewController: UIViewController {
                     self.navigationController?.pushViewController(nextPage, animated: true)
                     showAlert(title: "Login Successful", message: "Welcome, \(user.name)")
                 }
-                
-//                self.performSegue(withIdentifier: "homeView", sender: self)
-                
-                
-                
             }
         }
         
         showAlert(title: "Invalid Credential", message: "Email or Password is wrong")
     }
     
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "homeView" {
-//            if let info = segue.destination as? HomeTabBarController {
-//                info.emailCurrent = emailTxt.text!
-//            }
-//        }
-//    }
+
     
     func fetchUserData(){
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
