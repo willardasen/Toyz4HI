@@ -768,10 +768,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cart" id="RTY-Gd-jbG"/>
+                    <connections>
+                        <outlet property="tvCart" destination="rge-PR-7VX" id="dn5-Uh-YRq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlg-IT-2jH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4417.5572519083971" y="-19.014084507042256"/>
+            <point key="canvasLocation" x="4413" y="-19"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

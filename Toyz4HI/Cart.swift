@@ -7,8 +7,7 @@
 
 import Foundation
 struct cart {
-    var email : String?
-    var name : String?
+    var name : String
     var price : Int
-    var image : String?
+    var image : String
 }

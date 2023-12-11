@@ -43,7 +43,6 @@ class HomeViewController: UIViewController,UITableViewDataSource, UITableViewDel
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
         
-//        initGames()
         tvGames.dataSource = self
         tvGames.delegate = self
         
@@ -52,9 +51,6 @@ class HomeViewController: UIViewController,UITableViewDataSource, UITableViewDel
         context = appDelegate.persistentContainer.viewContext
         
         loadGame()
-//        let tabBar = tabBarController as! HomeTabBarController
-//
-//        print("ini pny tabbar" + tabBar.emailCurrent)
     }
     
     
@@ -73,6 +69,7 @@ class HomeViewController: UIViewController,UITableViewDataSource, UITableViewDel
         let cellCategory = arrGames[indexPath.row].category
         let cellDesc = arrGames[indexPath.row].desc
         let cellPrice = "Rp. \(arrGames[indexPath.row].price)"
+        let priceInt = arrGames[indexPath.row].price
         let cellImage = arrGames[indexPath.row].image
         
         cell.nameLbl.text = cellName
@@ -90,7 +87,8 @@ class HomeViewController: UIViewController,UITableViewDataSource, UITableViewDel
             
             newCart.setValue(tabBar.emailCurrent, forKey: "email")
             newCart.setValue(cellName, forKey: "gameName")
-            newCart.setValue(cellPrice, forKey: "price")
+            newCart.setValue(priceInt, forKey: "price")
+            newCart.setValue(cellImage, forKey: "image")
             
             do{
                 try self.context.save()

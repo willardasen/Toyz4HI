@@ -22,7 +22,7 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
             let results = try context.fetch(request) as! [NSManagedObject]
             
             for data in results {
-                    arrGames.append(games(
+                arrGames.append(games(
                     name: (data.value(forKey: "gameName") as! String),
                     category: (data.value(forKey: "category") as! String),
                     desc: (data.value(forKey: "gameDesc") as! String),
