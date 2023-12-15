@@ -31,16 +31,23 @@ class CartViewController: UIViewController,UITableViewDataSource,UITableViewDele
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         context = appDelegate.persistentContainer.viewContext
-        
-        fetchedUserCart()
 
-        for data in arrCart {
-            print(data.name)
-            print(data.price)
-        }
+        initCart()
+//        fetchedUserCart()
+//
+//        for data in arrCart {
+//            print(data.name)
+//            print(data.price)
+//        }
+    }
+    
+    
+    func initCart(){
+        arrCart.append(cart(name: "GOW", price: 200000, image: "GOW"))
     }
     
     func fetchedUserCart(){
+//        arrCart.removeAll()
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Cart")
         do{
             let results = try context.fetch(request) as! [NSManagedObject]
@@ -78,5 +85,45 @@ class CartViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 170
+    }
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            let oldNameCart = arrCart[indexPath.row].name
+            
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Cart")
+            
+            request.predicate = NSPredicate(format: "email==%@ && gameName==%@", email,oldNameCart)
+            
+            do{
+                let results = try context.fetch(request) as! [NSManagedObject]
+                
+                for data in results{
+                    context.delete(data)
+                }
+                
+                try context.save()
+                
+                fetchedUserCart()
+                
+                for data in arrCart{
+                    print(data.name)
+                    print(data.price)
+                }
+            }catch{
+                print("Error deleting")
+            }
+            
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchedUserCart()
     }
 }
