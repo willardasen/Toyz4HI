@@ -32,13 +32,12 @@ class CartViewController: UIViewController,UITableViewDataSource,UITableViewDele
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         context = appDelegate.persistentContainer.viewContext
 
-        initCart()
-//        fetchedUserCart()
-//
-//        for data in arrCart {
-//            print(data.name)
-//            print(data.price)
-//        }
+        fetchedUserCart()
+
+        for data in arrCart {
+            print(data.name)
+            print(data.price)
+        }
     }
     
     
@@ -47,7 +46,7 @@ class CartViewController: UIViewController,UITableViewDataSource,UITableViewDele
     }
     
     func fetchedUserCart(){
-//        arrCart.removeAll()
+        arrCart.removeAll()
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Cart")
         do{
             let results = try context.fetch(request) as! [NSManagedObject]
@@ -126,4 +125,36 @@ class CartViewController: UIViewController,UITableViewDataSource,UITableViewDele
         super.viewWillAppear(animated)
         fetchedUserCart()
     }
+    
+    @IBAction func checkoutBtn(_ sender: Any) {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Cart")
+        request.predicate = NSPredicate(format: "email==%@", email)
+        
+        do{
+            let results = try context.fetch(request) as! [NSManagedObject]
+            
+            for data in results {
+                context.delete(data)
+            }
+            
+            try context.save()
+            
+            fetchedUserCart()
+            
+            showAlert(title: "Payment Success", message: "Thank you for shopping")
+        }catch{
+            print("Error in deleting")
+        }
+    }
+    
+
+    
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    
 }

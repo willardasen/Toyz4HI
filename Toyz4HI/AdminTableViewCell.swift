@@ -29,5 +29,14 @@ class AdminTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    var toUpdate = {
+        
+    }
+    
+    @IBAction func UpdateBtn(_ sender: Any) {
+        self.toUpdate()
+    }
+    
 
 }

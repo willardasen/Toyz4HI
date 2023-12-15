@@ -16,6 +16,7 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
     var context: NSManagedObjectContext!
     
     func fetchGameData() {
+        arrGames.removeAll()
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Game")
         
         do {
@@ -51,6 +52,14 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.priceLbl.text = "Rp\(arrGames[indexPath.row].price)"
         cell.gameImage.image = UIImage(named: arrGames[indexPath.row].image!)
         
+        
+        cell.toUpdate = {
+            if let nextPage = self.storyboard?.instantiateViewController(withIdentifier: "updateView") as? UpdateGameViewController {
+                nextPage.gameUpdatedSection = self.arrGames[indexPath.row]
+                self.navigationController?.pushViewController(nextPage, animated: true)
+            }
+        }
+        
         return cell
     }
     
@@ -82,5 +91,41 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+
+           let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Game")
+
+            request.predicate = NSPredicate(format: "gameName==%@", arrGames[indexPath.row].name!)
+
+
+            do{
+                let results = try context.fetch(request) as! [NSManagedObject]
+
+                for data in results {
+                    context.delete(data)
+                }
+
+                try context.save()
+
+                fetchGameData()
+
+                for data in arrGames {
+                    print(data.name)
+                    print(data.price)
+                }
+            }catch{
+                print("Error deleting")
+            }
+        }
+    }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        fetchGameData()
+//    }
 }

@@ -22,6 +22,7 @@
 		056E14EE2AE26EDD00774D92 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056E14ED2AE26EDD00774D92 /* RegisterViewController.swift */; };
 		056E14F02AE27D1A00774D92 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056E14EF2AE27D1A00774D92 /* LoginViewController.swift */; };
 		056F04112B1EE5E400E7E841 /* AddGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F04102B1EE5E400E7E841 /* AddGameViewController.swift */; };
+		0585F9102B2C3D1D00034D7F /* UpdateGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0585F90F2B2C3D1D00034D7F /* UpdateGameViewController.swift */; };
 		05B392502AE7B22B0015CAF6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B3924F2AE7B22B0015CAF6 /* HomeViewController.swift */; };
 		05FB35A82B21A99A00A2DF2C /* AdminTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB35A72B21A99A00A2DF2C /* AdminTableViewCell.swift */; };
 		05FB35AA2B21D1DC00A2DF2C /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB35A92B21D1DC00A2DF2C /* CartTableViewCell.swift */; };
@@ -47,6 +48,7 @@
 		056E14ED2AE26EDD00774D92 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		056E14EF2AE27D1A00774D92 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		056F04102B1EE5E400E7E841 /* AddGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameViewController.swift; sourceTree = "<group>"; };
+		0585F90F2B2C3D1D00034D7F /* UpdateGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateGameViewController.swift; sourceTree = "<group>"; };
 		05B3924F2AE7B22B0015CAF6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		05FB35A72B21A99A00A2DF2C /* AdminTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTableViewCell.swift; sourceTree = "<group>"; };
 		05FB35A92B21D1DC00A2DF2C /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				05FB35A92B21D1DC00A2DF2C /* CartTableViewCell.swift */,
 				05FB35AB2B21D20200A2DF2C /* CartViewController.swift */,
 				05FB35AD2B22D9A600A2DF2C /* Cart.swift */,
+				0585F90F2B2C3D1D00034D7F /* UpdateGameViewController.swift */,
 			);
 			path = Toyz4HI;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				056E148D2AE25D2700774D92 /* AppDelegate.swift in Sources */,
 				056F04112B1EE5E400E7E841 /* AddGameViewController.swift in Sources */,
 				055757862B10AAD000E442D3 /* HomeTabBarController.swift in Sources */,
+				0585F9102B2C3D1D00034D7F /* UpdateGameViewController.swift in Sources */,
 				056E148F2AE25D2700774D92 /* SceneDelegate.swift in Sources */,
 				056E14EE2AE26EDD00774D92 /* RegisterViewController.swift in Sources */,
 				05B392502AE7B22B0015CAF6 /* HomeViewController.swift in Sources */,
