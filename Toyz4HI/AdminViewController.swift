@@ -49,7 +49,7 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.nameLbl.text = arrGames[indexPath.row].name
         cell.categoryLbl.text = arrGames[indexPath.row].category
         cell.descLbl.text = arrGames[indexPath.row].desc
-        cell.priceLbl.text = "Rp\(arrGames[indexPath.row].price)"
+        cell.priceLbl.text = "Rp. \(arrGames[indexPath.row].price)"
         cell.gameImage.image = UIImage(named: arrGames[indexPath.row].image!)
         
         
@@ -124,8 +124,16 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
         return true
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        fetchGameData()
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchGameData()
+        for data in arrGames {
+            print(data.name!)
+            print(data.category!)
+            print(data.desc!)
+            print(data.price)
+            print("image string: \(data.image!)")
+            print()
+        }
+    }
 }

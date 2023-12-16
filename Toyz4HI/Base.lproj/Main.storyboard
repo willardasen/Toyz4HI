@@ -141,16 +141,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weR-kI-xu8">
-                                                    <rect key="frame" x="190" y="39" width="195" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="bWu-VT-6OT"/>
-                                                        <constraint firstAttribute="width" constant="195" id="vGI-wk-bjN"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBU-1k-f9J">
                                                     <rect key="frame" x="190" y="140" width="195" height="21"/>
                                                     <constraints>
@@ -161,8 +151,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTc-8c-rAS">
-                                                    <rect key="frame" x="190" y="63" width="195" height="77"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Desc" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTc-8c-rAS">
+                                                    <rect key="frame" x="190" y="77" width="195" height="63"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="77" id="VgY-EA-4vT"/>
                                                         <constraint firstAttribute="width" constant="195" id="oqb-hU-lL1"/>
@@ -186,6 +176,16 @@
                                                         <action selector="addToCardOnClicked:" destination="wlf-fh-lGE" eventType="touchUpInside" id="M3f-gv-35L"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weR-kI-xu8">
+                                                    <rect key="frame" x="190" y="42" width="195" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="bWu-VT-6OT"/>
+                                                        <constraint firstAttribute="width" constant="195" id="vGI-wk-bjN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="dAq-CO-rkP" firstAttribute="leading" secondItem="67r-3n-VUY" secondAttribute="trailing" constant="8" symbolic="YES" id="0YL-7i-elq"/>
@@ -236,7 +236,7 @@
                             <constraint firstAttribute="bottom" secondItem="0CQ-jI-M7Z" secondAttribute="bottom" id="u9B-hd-tgJ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="94U-Ne-CYc"/>
+                    <tabBarItem key="tabBarItem" title="Home" selectedImage="homekit" catalog="system" id="94U-Ne-CYc"/>
                     <navigationItem key="navigationItem" id="uU2-Rc-5k6">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="QwB-mo-Vnk">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="FGt-oL-23F">
@@ -851,13 +851,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVX-3n-Z5L">
-                                                    <rect key="frame" x="183" y="11" width="190" height="21"/>
+                                                    <rect key="frame" x="183" y="11" width="190" height="37"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f54-GS-2mT">
-                                                    <rect key="frame" x="183" y="55" width="190" height="21"/>
+                                                    <rect key="frame" x="183" y="63" width="190" height="39"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -900,8 +900,9 @@
                             <constraint firstItem="C0R-sr-xd6" firstAttribute="trailing" secondItem="1ht-yP-rVA" secondAttribute="trailing" constant="16" id="pbv-gx-DuU"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Cart" id="RTY-Gd-jbG"/>
+                    <tabBarItem key="tabBarItem" title="Cart" selectedImage="cart.fill" catalog="system" id="RTY-Gd-jbG"/>
                     <connections>
+                        <outlet property="totalPriceLabel" destination="iRN-8l-k1H" id="gmj-OI-jOV"/>
                         <outlet property="tvCart" destination="rge-PR-7VX" id="dn5-Uh-YRq"/>
                     </connections>
                 </viewController>
@@ -911,12 +912,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gk0-k6-0To"/>
-        <segue reference="JDm-Yd-wwb"/>
+        <segue reference="gOi-lX-kUP"/>
+        <segue reference="S6I-7W-wHf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Toyz4HI" width="500" height="500"/>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="cloudBird" width="500" height="500"/>
+        <image name="homekit" catalog="system" width="128" height="104"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

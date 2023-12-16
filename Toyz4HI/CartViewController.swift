@@ -18,6 +18,10 @@ class CartViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     var email: String!
     
+    var totalPrice = 0
+    
+    @IBOutlet weak var totalPriceLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,17 +37,9 @@ class CartViewController: UIViewController,UITableViewDataSource,UITableViewDele
         context = appDelegate.persistentContainer.viewContext
 
         fetchedUserCart()
+        
+    }
 
-        for data in arrCart {
-            print(data.name)
-            print(data.price)
-        }
-    }
-    
-    
-    func initCart(){
-        arrCart.append(cart(name: "GOW", price: 200000, image: "GOW"))
-    }
     
     func fetchedUserCart(){
         arrCart.removeAll()
@@ -60,6 +56,9 @@ class CartViewController: UIViewController,UITableViewDataSource,UITableViewDele
                     ))
                 }
             }
+            
+            
+            
             print("Fetch success")
             tvCart.reloadData()
         }catch{
@@ -103,12 +102,20 @@ class CartViewController: UIViewController,UITableViewDataSource,UITableViewDele
                 }
                 
                 try context.save()
-                
+            
                 fetchedUserCart()
+            
+                totalPrice = 0
+                for cart in arrCart {
+                    totalPrice += cart.price
+                    print(cart.price)
+                }
+                totalPriceLabel.text = "Total: Rp. \(totalPrice)"
+                
                 
                 for data in arrCart{
-                    print(data.name)
-                    print(data.price)
+                    print("Setelah delete :" + data.name)
+                    print("setelah delete :\(data.price)" )
                 }
             }catch{
                 print("Error deleting")
@@ -124,6 +131,15 @@ class CartViewController: UIViewController,UITableViewDataSource,UITableViewDele
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchedUserCart()
+        totalPrice = 0
+        for cart in arrCart {
+            totalPrice += cart.price
+            print(cart.price)
+        }
+        
+        totalPriceLabel.text = "Total: Rp. \(totalPrice)"
+
+        print("total price \(totalPrice)")
     }
     
     @IBAction func checkoutBtn(_ sender: Any) {
@@ -139,7 +155,10 @@ class CartViewController: UIViewController,UITableViewDataSource,UITableViewDele
             
             try context.save()
             
+            totalPrice = 0
+            totalPriceLabel.text = "Total: Rp. \(totalPrice)"
             fetchedUserCart()
+            
             
             showAlert(title: "Payment Success", message: "Thank you for shopping")
         }catch{
@@ -147,7 +166,6 @@ class CartViewController: UIViewController,UITableViewDataSource,UITableViewDele
         }
     }
     
-
     
     func showAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
