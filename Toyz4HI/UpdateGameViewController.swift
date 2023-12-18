@@ -18,7 +18,7 @@ class UpdateGameViewController: UIViewController {
     
     @IBOutlet weak var categoryTxt: UITextField!
     
-    @IBOutlet weak var decsTxt: UITextField!
+    @IBOutlet weak var descTxt: UITextField!
     
     @IBOutlet weak var priceTxt: UITextField!
     
@@ -26,7 +26,7 @@ class UpdateGameViewController: UIViewController {
         super.viewDidLoad()
         gameNameTxt.text = gameUpdatedSection.name
         categoryTxt.text = gameUpdatedSection.category
-        decsTxt.text = gameUpdatedSection.desc
+        descTxt.text = gameUpdatedSection.desc
         priceTxt.text = String(gameUpdatedSection.price)
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -36,6 +36,25 @@ class UpdateGameViewController: UIViewController {
     }
     
     @IBAction func updateGameBtn(_ sender: Any) {
+        guard let gameName = gameNameTxt.text, !gameName.isEmpty else {
+            showAlert(title:"Game name is empty",message: "Game name must not be empty.")
+            return
+        }
+        
+        guard let category = categoryTxt.text, !category.isEmpty else {
+            showAlert(title:"Category is empty",message: "Category must not be empty.")
+            return
+        }
+        
+        guard let desc = descTxt.text, !desc.isEmpty else {
+            showAlert(title:"Description is empty",message: "Description must not be empty.")
+            return
+        }
+        
+        guard let price = priceTxt.text, !price.isEmpty else {
+            showAlert(title:"Price is empty",message: "Price must not be empty.")
+            return
+        }
         //masi gagal
 //        let oldGameName = gameUpdatedSection.name
 //        let oldCategory = gameUpdatedSection.category
@@ -56,13 +75,13 @@ class UpdateGameViewController: UIViewController {
             for data in results{
                 data.setValue(gameNameTxt.text, forKey: "gameName")
                 data.setValue(categoryTxt.text, forKey: "category")
-                data.setValue(decsTxt.text, forKey: "gameDesc")
+                data.setValue(descTxt.text, forKey: "gameDesc")
                 data.setValue(Int(priceTxt.text ?? "0"), forKey: "price")
             }
 
             try context.save()
-            
-            showAlert(title: "Update Successful", message: "The game data has been updated")
+            print("Successfully updated game")
+//            showAlert(title: "Update Successful", message: "The game data has been updated")
 
         }catch{
             print("Updating error")

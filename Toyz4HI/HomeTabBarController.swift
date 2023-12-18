@@ -10,6 +10,7 @@ import UIKit
 class HomeTabBarController: UITabBarController {
     
     var emailCurrent: String = ""
+    var usernameCurrent: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()

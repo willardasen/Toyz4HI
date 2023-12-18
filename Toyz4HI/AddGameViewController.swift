@@ -65,6 +65,7 @@ class AddGameViewController: UIViewController {
         do {
             try context.save()
             print("Successfully save game")
+//            showAlert(title: "Save Successful", message: "New game data has been added")
         } catch {
             print("Error saving game")
         }
