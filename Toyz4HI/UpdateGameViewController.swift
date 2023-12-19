@@ -55,19 +55,13 @@ class UpdateGameViewController: UIViewController {
             showAlert(title:"Price is empty",message: "Price must not be empty.")
             return
         }
-        //masi gagal
-//        let oldGameName = gameUpdatedSection.name
-//        let oldCategory = gameUpdatedSection.category
-//        let oldDesc = gameUpdatedSection.desc
-//        let oldPrice = gameUpdatedSection.price
+
+        let oldGameName = gameUpdatedSection.name
 
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Game")
 
-//        request.predicate = NSPredicate(format: "gameName == %@ AND category == %@ AND gameDesc == %@ AND price == %@", oldGameName!, oldCategory!, oldDesc!, oldPrice)
         
-//        request.predicate = NSPredicate(format: "gameName == %@ AND category == %@ AND gameDesc == %@", oldGameName!, oldCategory!, oldDesc!)
-        
-//        request.predicate = NSPredicate(format: "price == %@", oldPrice)
+        request.predicate = NSPredicate(format: "gameName == %@", oldGameName!)
 
         do{
             let results = try context.fetch(request) as! [NSManagedObject]
